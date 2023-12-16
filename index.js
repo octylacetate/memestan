@@ -83,7 +83,7 @@ function gridLoop() {
   imageGrid.innerHTML = "";
 
   // Nested loop to iterate through images
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 1; i <= 13; i++) {
       for (let j = 1; j <= 4; j++) {
           // Create image element
           let img = document.createElement("img");

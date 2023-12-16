@@ -12,6 +12,11 @@
     <div id="mySidebar" class="sidebar">
       <img id="profile-img" class="profile-icon" />
       <div class="profile-name no-trigger">John bhai</div>
+      <div class="acc-stats-info">
+      <div class="posts-count"><h4 class="numbers-stats">25</h4> <h4 class="text-stats">Posts</h4></div>
+      <div class="followers-count"><h4 class="numbers-stats">100k</h4> <h4 class="text-stats">Followers</h4></div>
+      <div class="following-count"><h4 class="numbers-stats">1000</h4> <h4 class="text-stats">Following</h4></div>
+    </div>
       <a href="#"><span><i class="material-icons no-trigger">info</i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;About</span></a><br>
       <a href="#"><i class="material-icons no-trigger">spa</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Services</a><br>
       <a href="#"><i class="material-icons no-trigger">monetization_on</i><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Clients</a><br>
@@ -23,9 +28,15 @@
     
     <!-- Main Section -->
     <div id="main">
+      <div class="top-container">
         <!-- Top Left Section -->
     <div class="top-left-section">
       <input type="text" class="search-box" placeholder="Search...">
+    </div>
+    <div id="top-middle">
+      <div class="logo">
+        <img src="/bg removed.png" alt="Your Logo">
+      </div>
     </div>
       <!-- Top Right Section -->
       <div class="top-right-section">
@@ -33,7 +44,7 @@
         <button class="message-button"><i class="material-icons">email</i></button>
         <button class="post-button">Post</button>
       </div>
-
+    </div>
       <!-- Rest of your content -->
       <div class="gallery">
       <h2>Main Section</h2>
@@ -43,15 +54,14 @@
         <div class="row" id="imageGrid" class="post-image"></div>
         
         <div class="post-buttons">
-          <button id="likeButton">Like</button>
-          <button id="commentButton">Comment</button>
-          <button id="shareButton">Share</button>
+          <!-- Buttons will be added dynamically through JavaScript -->
         </div>
         
         <div class="post-caption">
           <p>Your caption goes here...</p>
         </div>
       </div>
+      
     </div>
     </div>
 

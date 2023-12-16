@@ -14,7 +14,7 @@ body {
     position: fixed;
     z-index: 1;
     left: 0;
-    background-color: #686663;
+    background-color: #f3b704;
     overflow-x: hidden;
     transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
     padding-top: 60px;
@@ -77,13 +77,13 @@ body {
     display: flex;
     flex: 1;
     margin-left: 85px;
-    background: #8d877e;
+    background: #ddbf29;
     transition: margin-left 0.5s ease-in-out;
 }
 
 #main {
     flex: 1;
-    padding: 16px;
+    padding: 16px; padding-top: 0;
     transition: padding-left 0.5s ease-in-out, padding-right 0.5s ease-in-out;
 }
 
@@ -116,7 +116,7 @@ body {
 .notification-button,
 .message-button,
 .post-button {
-    background-color: #8d877e;
+    background-color: #ddbf29;
     border: none;
     color: white;
     padding: 10px;
@@ -220,4 +220,50 @@ body {
 
   .post-caption {
     margin-top: 10px;
+  }
+
+
+  .logo {
+    text-align: center; /* Center the logo horizontally */
+    margin-top: 20px;   /* Adjust the top margin as needed */
+  }
+  
+  .logo img {
+    width: 75px; /* Adjust the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+  }
+
+  .top-container{
+    display: flex;
+    align-items: center;
+  }
+  .acc-stats-info{
+    display: flex;
+    align-items: center;
+   vertical-align: middle;
+  }
+  .posts-count{
+    padding-left: 30px;padding-right: 5px;
+    border-right: #353535 1px solid;
+    
+  }
+
+  .followers-count{
+    padding-left: 30px;padding-right: 5px;
+    border-right: #353535 1px solid;
+}
+  .following-count{
+    padding-left: 20px;padding-right: 5px;
+    
+}
+  .numbers-stats{
+   padding-left: 15px;
+    font-size: medium;
+    font-weight:bold;
+    color: #ccc;
+  }
+  .text-stats{
+    font-size: medium;
+    font-weight:bold;
+    color: #353535;
   }
