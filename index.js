@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileIcon = document.getElementById('profile-img');
   const profileName = document.querySelector('.profile-name');
   var mainContent = document.getElementById("main");
-
+  const profileData = document.getElementById("profile-stats");
   profileIcon.style.visibility = 'hidden';
   profileName.style.visibility = 'hidden';
-
+  profileData.style.visibility = 'hidden';
   function isMouseOverSidebarContent() {
     // Check if the mouse is over any link, profile name in the sidebar
     return Array.from(sidebar.querySelectorAll('a, .profile-name')).some(element => element.matches(':hover'));
@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mainContent.style.marginLeft = "300px";
       profileIcon.style.visibility = 'visible';
       profileName.style.visibility = 'visible';
+      profileData.style.visibility = 'visible';
       mini = false;
     } else if (!isMouseOverSidebarContent() && !isMouseOverProfileIcon()) {
       console.log('Closing sidebar');
@@ -36,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         profileIcon.style.visibility = 'hidden';
         profileName.style.visibility = 'hidden';
+        profileData.style.visibility = 'hidden';
       }, animationDuration);
       mini = true;
     }

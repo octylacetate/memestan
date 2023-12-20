@@ -24,21 +24,27 @@ body {
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 34px;
+    padding: 0px 8px 0px 34px;
     text-decoration: none;
     font-size: 25px;
     color: #383634;
     display: block;
     transition: 0.3s;
 }
+ #first-link{
+padding-top: 40px;
+}
 
 .sidebar a:hover {
     color: #f1f1f1;
 }
 
-.material-icons,
+
 .icon-text {
     vertical-align: middle;
+    width: 50px;height: 24px;
+    margin-left: 10px;
+    font-size: medium;
 }
 
 .material-icons {
@@ -261,9 +267,13 @@ body {
     font-size: medium;
     font-weight:bold;
     color: #ccc;
+    margin-top: 0;margin-top: 3px;
   }
   .text-stats{
     font-size: medium;
     font-weight:bold;
     color: #353535;
+    padding-left: 2px;
+    margin: 0;
+ 
   }
