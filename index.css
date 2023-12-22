@@ -17,7 +17,7 @@ body {
     background-color: #f3b704;
     overflow-x: hidden;
     transition: width 0.5s ease-in-out, padding 0.5s ease-in-out;
-    padding-top: 60px;
+    padding-top: 30px;
     white-space: nowrap;
     vertical-align: middle;
     border-right: 1px solid #353535;
@@ -43,7 +43,7 @@ padding-top: 40px;
 .icon-text {
     vertical-align: middle;
     width: 50px;height: 24px;
-    margin-left: 10px;
+    margin-left: 10px;padding-bottom: 10px;
     font-size: medium;
 }
 
@@ -59,7 +59,9 @@ padding-top: 40px;
         font-size: 18px;
     }
 }
-
+hr{
+    border-top: 1px solid #353535;
+}
 #profile-img {
     width: 100px;
     height: 100px;
