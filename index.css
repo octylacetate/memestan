@@ -85,7 +85,7 @@ hr{
     display: flex;
     flex: 1;
     margin-left: 85px;
-    background: #ddbf29;
+    background: #3C3F52;
     transition: margin-left 0.5s ease-in-out;
 }
 
@@ -96,7 +96,7 @@ hr{
 }
 
 .additional-section {
-    width: 200px;
+    width: 400px;
     background-color: #eee;
     padding: 16px;
     box-sizing: border-box;
@@ -136,7 +136,10 @@ hr{
     border-radius: 4px;
     transition: background-color 0.5s ease-in-out;
 }
-
+.notification-button,
+.message-button{
+  background: none;
+}
 .post-button {
     border: 1px solid #383634;
     border-radius: 15px;
@@ -233,11 +236,11 @@ hr{
 
   .logo {
     text-align: center; /* Center the logo horizontally */
-    margin-top: 20px;   /* Adjust the top margin as needed */
+    margin-top: 10px;   /* Adjust the top margin as needed */
   }
   
   .logo img {
-    width: 75px; /* Adjust the width of the logo */
+    width: 85px; /* Adjust the width of the logo */
     height: auto; /* Maintain the aspect ratio */
   }
 
@@ -279,3 +282,80 @@ hr{
     margin: 0;
  
   }
+
+            /* POST CARD CONTAINER */
+
+
+            .glass-container {
+              position: relative;
+              max-width: 800px;height: 400px;
+              padding: 0px;
+              background:none;
+              border-radius: 10px;
+              backdrop-filter: blur(15px);
+              box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+              overflow: hidden;
+              display: flex; /* Set to flex container */
+              align-items: center; /* Center items vertically */
+              justify-content: space-between; /* Center items horizontally */
+              flex-wrap: nowrap;
+              flex-basis: 50%;
+            }
+
+            .post-image {
+              width:22em;
+              border-radius: 8px;
+              /* margin-bottom: 15px; */
+            }
+        
+            .post-content {
+              color: #fff;
+              text-align: center;
+              font-family: 'Arial', sans-serif;
+              /* display: flex; 
+              align-items:center; 
+              justify-content: center; 
+              flex-wrap: wrap;  */
+              width: 50%; /* Set a width for your element */
+  margin-left: auto;
+  margin-right: auto;
+            }
+        
+            .profile-icon {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              background-color: #eee;
+              display: block;
+              margin-bottom: 10px;
+              transition: visibility 0.5s ease-in-out;
+              margin-left: auto;margin-right: auto;
+            }
+        
+            #caption {
+              margin: 0;
+              width: 200px; padding:8px;
+              margin-left: auto;margin-right: auto;
+              overflow: hidden;
+            }
+        
+           .post-buttons button {width: 50px;
+              background: none;
+              border: none;
+              margin: 0;
+              padding: 0;
+              cursor: pointer;
+            }
+           .post-buttons button:hover{
+            border: 1px solid #eee;
+            border-radius: 20px;
+            transition: 0.5s border ;
+          transition: 1s border-radius;
+           }
+        
+        
+           
+            .post-buttons{margin-top: 10px;
+              display: flex;
+              justify-content: center;
+            }
