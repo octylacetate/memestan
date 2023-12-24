@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+  <title>Welcome to memistan bitch</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,8 +12,8 @@
     <div id="mySidebar" class="sidebar">
       <a href="/login.html"><img width="24" height="24" src="https://img.icons8.com/material-rounded/24/4D4D4D/login-rounded-right.png" alt="login-rounded-right"/></i><span class="icon-text">&nbsp;&nbsp;&nbsp;&nbsp;Login/Signup</span></a><br>
 
-      <img id="profile-img" class="profile-icon" />
-      <div class="profile-name no-trigger">John bhai</div>
+      <img id="profile-img" class="profile-icon" src="/10.jpg" onclick="openProfileDisplay() "/>
+      <div class="profile-name no-trigger" onclick="openProfileDisplay()" >John bhai </div>
       <div class="acc-stats-info">
       <div id="profile-stats" class="posts-count"><h4 class="numbers-stats">25</h4> <h4 class="text-stats">Posts</h4></div>
       <div id="profile-stats" class="followers-count"><h4 class="numbers-stats">100k</h4> <h4 class="text-stats">Followers</h4></div>
@@ -46,7 +46,7 @@
       <div class="top-right-section">
         <button class="notification-button"><i class="material-icons">notifications</i></button>
         <button class="message-button"><i class="material-icons">email</i></button>
-        <button class="post-button">Post</button>
+        <button class="post-button" onclick="openNewPost()">New Post</button>
       </div>
     </div>
       <!-- Rest of your content -->

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c7b300;
+            text-align: center;
+        }
+
+        .post-container {
+            max-width: 600px;
+            margin: 0px auto 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        #previewImage {
+            max-width: 100%;
+            height: auto;
+            margin-top: 10px;
+        }
+
+        label.upload-label {
+            padding: 10px;
+            background-color: #c7b300;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        #caption {
+            width: 100%;
+            padding: 8px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #c7b300;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+                /* logo section */
+.logo {
+    text-align: center; /* Center the logo horizontally */
+    margin-top: 10px;   /* Adjust the top margin as needed */
+  }
+  
+  .logo img {
+    width: 85px; /* Adjust the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+  }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="/Memestan_logo-removebg-hd.png" alt="Your Logo">
+      </div>
+
+    <div class="post-container">
+        <h1>Create New Post</h1>
+
+        <!-- Upload Picture Section -->
+        <input type="file" id="uploadImage" accept="image/*" style="display: none;">
+        <label for="uploadImage" class="upload-label">Upload Picture</label>
+
+        <!-- Display the selected file name -->
+        <div id="fileName"></div>
+
+        <!-- Display the preview of the selected image -->
+        <img id="previewImage" alt="Preview" style="display: none;">
+
+        <!-- Caption Section -->
+        <textarea id="caption" placeholder="Write a caption for your post"></textarea>
+
+        <!-- Post Button -->
+        <button onclick="createPost()">Post</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle file input change event
+            var uploadImage = document.getElementById('uploadImage');
+            var fileNameDisplay = document.getElementById('fileName');
+            var previewImage = document.getElementById('previewImage');
+
+            uploadImage.addEventListener('change', function () {
+                // Display the selected file name
+                fileNameDisplay.textContent = uploadImage.files[0] ? uploadImage.files[0].name : '';
+
+                // Display the preview of the selected image
+                if (uploadImage.files.length > 0) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        previewImage.src = e.target.result;
+                        previewImage.style.display = 'block';
+                    };
+
+                    reader.readAsDataURL(uploadImage.files[0]);
+                }
+            });
+        });
+
+        function createPost() {
+            // Get values from the form
+            var caption = document.getElementById('caption').value;
+
+            // Simulate posting logic (you can replace this with your actual posting logic)
+            alert('Post Created!\n\nCaption: ' + caption);
+        }
+    </script>
+</body>
+</html>

@@ -70,6 +70,7 @@ hr{
     display: block;
     margin: 0 auto;
     transition: visibility 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .profile-name {
@@ -79,6 +80,7 @@ hr{
     font-family: 'Times New Roman', Times, serif;
     color: #383634;
     transition: visibility 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .main-container {

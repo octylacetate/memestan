@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Updater</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #c7b300;
+        }
+
+        .profile-container {
+            max-width: 800px;
+            margin:  0px auto 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-info {
+            text-align: center;
+        }
+
+        .profile-info h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .profile-info p {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .update-form {
+            text-align: center;
+        }
+
+        .update-form label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        .update-form input,
+        .update-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .update-form button {
+            padding: 10px;margin-top: 10px;
+            background-color: #c7b300;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .update-form input[type="file"] {
+            display: none;
+        }
+
+        .update-form label.upload-label {
+            padding: 10px;
+            background-color: #c7b300;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Style the file name display */
+        .update-form .file-name {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* logo section */
+.logo {
+    text-align: center; /* Center the logo horizontally */
+    margin-top: 10px;   /* Adjust the top margin as needed */
+  }
+  
+  .logo img {
+    width: 85px; /* Adjust the width of the logo */
+    height: auto; /* Maintain the aspect ratio */
+  }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="/Memestan_logo-removebg-hd.png" alt="Your Logo">
+      </div>
+
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src="your-profile-image.jpg" alt="Profile Picture">
+        </div>
+        <div class="profile-info" id="profileInfo">
+            <h1>Your Name</h1>
+            <p>Bio</p>
+            <p>Location: City, Country</p>
+        </div>
+
+        <!-- Profile Update Form -->
+        <div class="update-form">
+            <label for="uploadImage" class="upload-label">Upload Profile Picture</label>
+            <input type="file" id="uploadImage" accept="image/*">
+
+            <!-- Display the file name -->
+            <div class="file-name" id="fileName"></div>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" placeholder="Enter your bio"></textarea>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" placeholder="Enter your location">
+
+            <button onclick="updateProfile()">Update Profile</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Handle file input change event
+            var uploadImage = document.getElementById('uploadImage');
+            var fileNameDisplay = document.getElementById('fileName');
+
+            uploadImage.addEventListener('change', function () {
+                // Display the selected file name
+                fileNameDisplay.textContent = uploadImage.files[0] ? uploadImage.files[0].name : '';
+            });
+        });
+
+        function updateProfile() {
+            // Get values from the form
+            var name = document.getElementById('name').value;
+            var bio = document.getElementById('bio').value;
+            var location = document.getElementById('location').value;
+
+            // Update profile information
+            var profileInfo = document.getElementById('profileInfo');
+            profileInfo.innerHTML = `
+                <h1>${name}</h1>
+                <p>${bio}</p>
+                <p>Location: ${location}</p>
+            `;
+
+            // Update profile picture if a file is selected
+            var uploadImage = document.getElementById('uploadImage');
+            var profilePicture = document.querySelector('.profile-picture img');
+
+            if (uploadImage.files.length > 0) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    profilePicture.src = e.target.result;
+                };
+
+                reader.readAsDataURL(uploadImage.files[0]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -115,3 +115,20 @@ document.getElementById('shareButton').addEventListener('click', function() {
   // Implement share functionality
   alert('Shared!');
 });
+
+// Opening new profile page
+function openProfileDisplay() {
+  // Specify the URL of the new page you want to open
+  var newPageUrl = 'http://127.0.0.1:5500/profile-display.html';
+
+  // Open the new page in a new tab or window
+  window.open(newPageUrl, '_blank');
+}
+
+function openNewPost() {
+  // Specify the URL of the new page you want to open
+  var newPageUrl = 'http://127.0.0.1:5500/new-post.html';
+
+  // Open the new page in a new tab or window
+  window.open(newPageUrl, '_blank');
+}
