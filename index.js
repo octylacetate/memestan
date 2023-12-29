@@ -1,77 +1,33 @@
-document.addEventListener('DOMContentLoaded', () => {
-  let mini = true;
-  const debounceTime = 100;
-  const animationDuration = 200;
-  let timer;
+let closebtn = document.getElementById("Closebtn");
+let openbtn = document.getElementById("Openbtn");
+let linkscontainer = document.getElementById("links-container");
+let profileImg = document.getElementById("profile-img");
+let profileName = document.getElementById("profile-name");
+openbtn.style.visibility = "visible";
+closebtn.style.visibility = "hidden"
+profileImg.style.visibility = "hidden";
+profileName.style.visibility = "hidden";
+function openNav() {
+document.getElementById("mySidenav").style.width = "250px";
+document.getElementById("main").style.marginLeft = "250px";
+openbtn.style.visibility = "hidden";
+closebtn.style.visibility = "visible";
+profileImg.style.visibility = "visible";
+profileName.style.visibility = "visible";
+linkscontainer.style.backgroundColor = "#FFD93D";
+linkscontainer.style.borderColor = "#FFD93D";
+}
 
-  const sidebar = document.querySelector('.sidebar');
-  const profileIcon = document.getElementById('profile-img');
-  const profileName = document.querySelector('.profile-name');
-  var mainContent = document.getElementById("main");
-  const profileData = document.getElementById("profile-stats");
-  profileIcon.style.visibility = 'hidden';
-  profileName.style.visibility = 'hidden';
-  profileData.style.visibility = 'hidden';
-  function isMouseOverSidebarContent() {
-    // Check if the mouse is over any link, profile name in the sidebar
-    return Array.from(sidebar.querySelectorAll('a, .profile-name')).some(element => element.matches(':hover'));
-  }
-
-  function isMouseOverProfileIcon() {
-    return profileIcon.matches(':hover');
-  }
-
-  function toggleSidebar() {
-    if (mini && !isMouseOverSidebarContent()) {
-      console.log('Opening sidebar');
-      sidebar.style.width = '300px';
-      mainContent.style.marginLeft = "300px";
-      profileIcon.style.visibility = 'visible';
-      profileName.style.visibility = 'visible';
-      profileData.style.visibility = 'visible';
-      mini = false;
-    } else if (!isMouseOverSidebarContent() && !isMouseOverProfileIcon()) {
-      console.log('Closing sidebar');
-      sidebar.style.width = '85px';
-      mainContent.style.marginLeft = "0px";
-      setTimeout(() => {
-        profileIcon.style.visibility = 'hidden';
-        profileName.style.visibility = 'hidden';
-        profileData.style.visibility = 'hidden';
-      }, animationDuration);
-      mini = true;
-    }
-  }
-
-  sidebar.addEventListener('mouseover', () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      toggleSidebar();
-    }, debounceTime);
-  });
-
-  sidebar.addEventListener('mouseleave', () => {
-    clearTimeout(timer);
-    if (!mini) {
-      timer = setTimeout(() => {
-        toggleSidebar();
-      }, debounceTime);
-    }
-  });
-
-  profileIcon.addEventListener('mouseenter', () => {
-    clearTimeout(timer);
-  });
-
-  profileIcon.addEventListener('mouseleave', () => {
-    if (!isMouseOverSidebarContent()) {
-      timer = setTimeout(() => {
-        toggleSidebar();
-      }, debounceTime);
-    }
-  });
-});
-
+function closeNav() {
+document.getElementById("mySidenav").style.width = "85px";
+document.getElementById("main").style.marginLeft= "85px";
+openbtn.style.visibility = "visible";
+closebtn.style.visibility = "hidden";
+profileImg.style.visibility = "hidden";
+profileName.style.visibility = "hidden";
+linkscontainer.style.backgroundColor = "#F6F1E9";
+linkscontainer.style.borderColor = "#FFD93D";
+}
 
 
 // Grid Loop
