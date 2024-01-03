@@ -57,14 +57,17 @@
     </div>
       <!-- Rest of your content -->
       <div class="gallery">
-      <h2>Main Section</h2>
+      <h2 class="main-txt">Daily Feed</h2>
 
       
-      <div class="glass-container">
-        <img class="post-image" src="/1.jpg" alt="Post Image">
-        
-        <div class="post-content">
-          <img  class="profile-icon"  title="this will show profile name/username"/>
+      <div class="glass-container" id="glass-container">
+        <div class="post-img-box">
+        <img class="post-image" id="post-img" src="/1.jpg" alt="Post Image">
+        </div>
+        <div class="post-content" id="post-content-1">
+          <img  class="profile-icon" src="/11.jpg"  title="this will show profile name/username"/>
+          <div id="profile-name" class="profile-name-post no-trigger" onclick="openProfileDisplay()" >John bhai nlnljnlnlmk</div>
+
           
           <p id="caption">Your post description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum placeat accusamus consectetur eum temporibus magnam possimus nostrum, sed cum expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo rerum totam placeat dolorem adipisci autem quasi assumenda magni optio soluta! </p>
           <div class="post-buttons">

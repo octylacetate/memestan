@@ -2,8 +2,137 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c7b300;
+    background-color: #ffd93d ;
 }
+@font-face {
+    font-family: story;
+    src: url(/story-cufonfonts/Story.otf);
+  }
+  @font-face {
+    font-family: episode;
+    src: url(/episode-1-cufonfonts/EPISODE1.TTF);
+  }
+  @font-face {
+    font-family: fabada;
+    src: url(/fabada-cufonfonts/Fabada-regular.otf);
+  }
+  @font-face {
+    font-family: vogue;
+    src: url(/vogue-cufonfonts/Vogue.ttf);
+  }
+  @font-face {
+    font-family: midnight;
+    src: url(/midnight-workers-cufonfonts/Midnight\ Workers.ttf);
+  }
+  @font-face {
+    font-family: kyoto;
+    src: url(/kyoto-northern-cufonfonts/kyoto\ northern.ttf);
+  }
+
+                    /* sidebar */
+                    .sidenav {
+                        height: 100%;
+                        width: 85px;
+                        position: fixed;
+                        z-index: 10;
+                        top: 0;
+                        left: 0;
+                        background-color: #FFD93D;
+                        overflow-x: hidden;
+                        transition: 0.5s;
+                        padding-top: 0px;
+                        white-space: nowrap;
+                          vertical-align: middle;
+                          display: flex;
+                          /* align-items: center;
+                          flex-direction: column; */
+                      }
+                      
+                      .sidenav a {
+                        padding: 8px 8px 8px 20px;
+                        text-decoration: none;
+                        font-size: 22px;
+                        font-family: fabada;
+                        color: #080808;
+                        display: block;
+                        transition: 0.3s;
+                        
+                      }
+                      
+                      .sidenav a:hover {
+                        color: #f1f1f1;
+                      }
+                      .sidebar-icon{
+                        width: 22px;height: 22px;
+                        fill:#1A1A1A;
+                        transition: 0.5s fill;
+                      }
+                      .sidebar-icon:hover{
+                        fill: #ffd93d;
+                      }
+                      
+                      .sidenav .closebtn {
+                        position:absolute;
+                        top: 0;
+                        right: 25px;
+                        font-size: 36px;
+                        margin-left: 50px;
+                      }
+                      .sidenav .openbtn {
+                        position:absolute;
+                        padding: 8px 32px 8px 8px;
+                        top: 0;
+                        left: 18px;
+                        font-size: 36px;
+                        margin-right: 50px;
+                      }
+                      .links-container{
+                        background: #F6F1E9;
+                        height: 567px;width: 59px;
+                        margin-top: 20px;top: 50px;position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content:left;
+                        margin-left: 8px;
+                        border:2px solid #F6F1E9;
+                        border-radius: 25px;
+                        transition: 0.5s background;
+                      }
+                      
+                      #profile-img {
+                          width: 85px;
+                          height: 85px;
+                          border-radius: 50%;
+                          background-color: #eee;
+                          display: block;
+                          margin: 0 auto;
+                          transition: visibility 0.5s ease-in-out;
+                          cursor: pointer;
+                          top: 100px;left: 85px;position: absolute;
+                      }
+                      #profile-name{
+                        transition: 0.5s visibility ease-in-out;
+                      }
+                      
+                      .profile-name {
+                          font-size: 28px;
+                          text-align: center;
+                          line-height: 50px;
+                          font-family: kyoto;
+                          color: #383634;
+                          transition: visibility 0.5s ease-in-out;
+                          cursor: pointer;
+                          top: 185px;left: 80px;position: absolute;
+                          width: 100px;height: 50px;overflow: hidden;
+                          transition: 0.5s color;
+                      }
+                      .profile-name:hover{
+                        color: #e2e2e2;
+                      }
+                      @media screen and (max-height: 450px) {
+                        .sidenav {padding-top: 15px;}
+                        .sidenav a {font-size: 18px;}
+                      }
 
 /* logo section */
 .logo {
