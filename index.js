@@ -42,47 +42,6 @@ linkscontainer.style.borderColor = "#FFD93D";
 }
 
 
-// Grid Loop
-
-// Grid Loop
-function gridLoop() {
-  // Variables for the loop
-  let imageGrid = document.getElementById("imageGrid");
-  
-  // Clear previous content
-  imageGrid.innerHTML = "";
-
-  // Nested loop to iterate through images
-  for (let i = 1; i <= 13; i++) {
-      for (let j = 1; j <= 4; j++) {
-          // Create image element
-          let img = document.createElement("img");
-          img.src = "/" + j + ".jpg";
-          img.alt = "Image " + j;
-
-          // Append image to the imageGrid div
-          imageGrid.appendChild(img);
-      }
-  }
-}
-
-// Call gridLoop when the page loads
-document.addEventListener('DOMContentLoaded', gridLoop);
-
-document.getElementById('likeButton').addEventListener('click', function() {
-  // Implement like functionality
-  alert('Liked!');
-});
-
-document.getElementById('commentButton').addEventListener('click', function() {
-  // Implement comment functionality
-  alert('Commented!');
-});
-
-document.getElementById('shareButton').addEventListener('click', function() {
-  // Implement share functionality
-  alert('Shared!');
-});
 
 // Opening new profile page
 function openProfileDisplay() {
@@ -96,6 +55,13 @@ function openProfileDisplay() {
 function openNewPost() {
   // Specify the URL of the new page you want to open
   var newPageUrl = 'http://127.0.0.1:5500/new-post.html';
+
+  // Open the new page in a new tab or window
+  window.open(newPageUrl, '_blank');
+}
+function openProfileUpdate() {
+  // Specify the URL of the new page you want to open
+  var newPageUrl = 'http://127.0.0.1:5500/profile-update.html';
 
   // Open the new page in a new tab or window
   window.open(newPageUrl, '_blank');

@@ -28,3 +28,25 @@ profileName.style.visibility = "hidden";
 linkscontainer.style.backgroundColor = "#F6F1E9";
 linkscontainer.style.borderColor = "#FFD93D";
 }
+
+function openProfileUpdate() {
+    // Specify the URL of the new page you want to open
+    var newPageUrl = 'http://127.0.0.1:5500/profile-update.html';
+  
+    // Open the new page in a new tab or window
+    window.open(newPageUrl, '_blank');
+  }
+  function openNewPost() {
+    // Specify the URL of the new page you want to open
+    var newPageUrl = 'http://127.0.0.1:5500/new-post.html';
+  
+    // Open the new page in a new tab or window
+    window.open(newPageUrl, '_blank');
+  }
+  function openProfileDisplay() {
+    // Specify the URL of the new page you want to open
+    var newPageUrl = 'http://127.0.0.1:5500/profile-display.html';
+  
+    // Open the new page in a new tab or window
+    window.open(newPageUrl, '_blank');
+  }

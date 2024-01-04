@@ -66,6 +66,7 @@ body {
 .sidebar-icon{
   width: 22px;height: 22px;
   fill:#1A1A1A;
+  stroke-width: 10px;
   transition: 0.5s fill;
 }
 .sidebar-icon:hover{
@@ -265,7 +266,7 @@ body {
 .notification-button,
 .message-button,
 .post-button {
-    background-color: #ddbf29;
+    background-color: #FFD93D;
     border: none;
     color: rgb(31, 31, 31);
     padding: 10px;
@@ -280,6 +281,7 @@ body {
 .notification-button,
 .message-button{
   background: none;
+ 
 }
 .post-button {
     border: 1px solid #383634;
@@ -288,6 +290,7 @@ body {
 
 .post-button:hover {
     background-color: #383634;
+    color: #FFD93D;
 }
 
 .search-box {

@@ -246,3 +246,44 @@ body {
 .gallery img:hover {
     transform: scale(1.1);
 }
+button {
+	border-radius: 20px;
+	border: 1px solid #ffd93d;
+	background-color: #ffd93d;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+	text-shadow: 2px 2px 8px #1b1b1b ; 
+  transition: 0.5s background ease-in-out;
+}
+button:hover{
+  background: #ffffff;
+  color:#ffd93d ;
+  text-shadow: none;
+}
+#new-post-btn{
+  border-radius: 20px;
+	border: 1px solid #ffd93d;
+	background-color: #ffd93d;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+    cursor: pointer;
+	text-shadow: 2px 2px 8px #1b1b1b ; 
+  transition: 0.5s background ease-in-out;
+ float: right;
+}
+#new-post-btn:hover{
+  background: #ffffff;
+  color:#ffd93d ;
+  text-shadow: none;
+}
